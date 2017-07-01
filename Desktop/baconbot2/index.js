@@ -655,7 +655,7 @@ const app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3232;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -666,17 +666,18 @@ app.use(express.static(__dirname + '/public'));
 // set the home page route
 app.get('/', (request, response) => {
     // ejs render automatically looks in the views folder
-    response.render('index');
+    response.render('index.js');
+
+     // pings server every 15 minutes to prevent dynos from sleeping
+setInterval(() => {
+  http.get('http://baconbot2.herokuapp.com');
+}, 900000);
+
 });
 
 app.listen(port, () => {
     // will echo 'Our app is running on http://localhost:5000 when run locally'
     console.log('Our app is running on http://localhost:' + port);
 });
-
- // pings server every 15 minutes to prevent dynos from sleeping
-setInterval(() => {
-  http.get('http://baconbot2.herokuapp.com');
-}, 900000);
 
 bot.login('MzEzNDU1MjMwMjcwMzA4MzU1.DBoW8Q.2gYvpsWQ_mQ8hOD8y8ugoKOG_qs');
