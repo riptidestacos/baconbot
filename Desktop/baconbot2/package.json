@@ -1,0 +1,36 @@
+{
+  "name": "baconbot2",
+  "version": "1.0.0",
+  "description": "Hosted by Heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RiptidesTacos",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "discord.js-music": "^1.0.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "get-youtube-id": "^1.0.0",
+    "request": "^2.81.0",
+    "youtube-info": "^1.1.1",
+    "ytdl-core": "^0.14.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/baconbot2.git"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
+  },
+  "keywords": [
+    "heroku",
+    "discord.js",
+    "baconbot"
+  ]
+}
