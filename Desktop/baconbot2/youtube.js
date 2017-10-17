@@ -4,7 +4,7 @@ const getYouTubeID = require('get-youtube-id');
 
 
 
-var yt_api_key = "AIzaSyAWBb4wTst3DPhcKDF-ljNBSPylyNEQubw";
+var yt_api_key = "";
 
 
 
